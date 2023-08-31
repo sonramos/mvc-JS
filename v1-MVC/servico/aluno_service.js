@@ -9,7 +9,7 @@ class AlunoService {
             throw new Error('Aluno já cadastrado!');
         }
         else if (idade < 18) {
-            throw new Error('Aluno menor de idade!');
+            throw new Error('Aluno menor de idade não permitido!');
         }
         const alunoNovo = new Aluno(nome, idade, matricula);
         this.repositorio.inserir(alunoNovo);
@@ -25,7 +25,9 @@ class AlunoService {
         this.repositorio.remover(matricula);
     }
 
+    /*
     listarMenoresIdade() {
         return this.repositorio.listar().filter(aluno => aluno.idade < 18);
     }
+    */
 }

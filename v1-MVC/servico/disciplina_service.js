@@ -37,10 +37,8 @@ class DisciplinaService {
         if (disciplinaPesquisada.length < 1) {
             throw new Error('Disciplina não consta no banco de dados!')
         }
-        const alunoAInserir = this.alunoService.pesquisarPorMatricula(matriculaAluno);
-        //const alunoAInserir = this.alunoService.inserir(nomeAluno, idadeAluno, matriculaAluno);
-        
-        return 
-
+        const alunoAInserir = this.alunoService.inserir(nomeAluno, idadeAluno, matriculaAluno);
+        disciplinaPesquisada.alunos = this.alunoService.repositorio.listar();
+        return alunoAInserir;
     }
 }

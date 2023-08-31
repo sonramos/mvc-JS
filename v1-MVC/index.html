@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,25 +7,36 @@
 </head>
 
 <body>
+    <div>
+        Nome:<input id="nome"><br>
+        Idade:<input id="idade" type="number"><br>
+        Matrícula:<input id="matricula"><br>
 
-    Nome:<input id="nome"><br>
-    Idade:<input id="idade" type="number"><br>
-    Matrícula:<input id="matricula"><br>
+        <button onclick="aluno_controlador.inserir()">Cadastrar</button>
+        <button onclick="aluno_controlador.listarAlunosMenoresIdade()">Mostrar Menores</button>
 
-    <button onclick="controlador.inserir()">Cadastrar</button>
-    <button onclick="controlador.listarAlunosMenoresIdade()">Mostrar Menores</button>
+        <ol id="listaAlunos"></ol>
 
-    <ol id="listaAlunos">
+        <!-- <ul id="listaAlunosMenores"></ul>
+    </div> -->
+    <div>
+        Código:<input id="codigoMatricula"><br>
+        Nome:<input id="nomeMatricula"><br>
 
-    </ol>
+        <button onclick="disciplina_controlador.inserir()">Cadastrar</button>
 
-    <ul id="listaAlunosMenores">
-    </ul>
+        <ol id="listaDisciplinas">
+        </ol>
+    </div>
 
     <script src="modelo/aluno.js"></script>
     <script src="repositorio/aluno_repositorio.js"></script>
     <script src="servico/aluno_service.js"></script>
     <script src="controlador/aluno_controlador.js"></script>
+    <script src="modelo/disciplina.js"></script>
+    <script src="repositorio/disciplina_repositorio.js"></script>
+    <script src="servico/disciplina_service.js"></script>
+    <script src="controlador/disciplina_controlador.js"></script>
     <script src="script.js"></script>
 
 </body>

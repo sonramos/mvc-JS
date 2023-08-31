@@ -22,10 +22,12 @@ class AlunoControlador {
         elementoDestino.appendChild(alunoElemento);
     }
 
+    /*
     listarAlunosMenoresIdade() {
         const listaAlunosMenoresElemento = document.querySelector('#listaAlunosMenores');
         const alunosMenores = this.servico.listarMenoresIdade();
         alunosMenores.forEach(menor => this.inserirAlunoNoHtml(menor, listaAlunosMenoresElemento));
     }
+    */
 
 }
